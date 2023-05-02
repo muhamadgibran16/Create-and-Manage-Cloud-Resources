@@ -12,7 +12,6 @@ Name the instance Instance name.
 Use an f1-micro machine type.
 Use the default image type (Debian Linux).
 
----------------------------------------------------------------------------------------------
 
 gcloud compute instances create nucleus-jumphost-878 \
           --network nucleus-vpc \
@@ -32,7 +31,6 @@ Create a zonal cluster using <filled in at lab start>.
 Use the Docker container hello-app (gcr.io/google-samples/hello-app:2.0) as a placeholder; the team will replace the container with their own work later.
 Expose the app on port App port number.
 
----------------------------------------------------------------------------------------------
 
 gcloud container clusters create nucleus-backend \
           --num-nodes 1 \
@@ -50,7 +48,6 @@ kubectl expose deployment hello-server \
 
 ---------------------------------------------------------------------------------------------
 
-
 Task 3. Set up an HTTP load balancer
 You will serve the site via nginx web servers, but you want to ensure that the environment is fault-tolerant. Create an HTTP load balancer with a managed instance group of 2 nginx web servers. Use the following code to configure the web servers; the team will replace this with their own configuration later.
 
@@ -65,7 +62,7 @@ Create a backend service, and attach the managed instance group with named port 
 Create a URL map, and target the HTTP proxy to route requests to your URL map.
 Create a forwarding rule.
 
----------------------------------------------------------------------------------------------
+
 
 cat << EOF > startup.sh
 #! /bin/bash
