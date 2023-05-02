@@ -1,7 +1,8 @@
 # Create-and-Manage-Cloud-Resources
 Challenge Lab Google Cloud Computing Foundations (Google Skillboost)
 
-============================================================================================
+---------------------------------------------------------------------------------------------
+
 Task 1. Create a project jumphost instance
 You will use this instance to perform maintenance for the project.
 
@@ -21,7 +22,7 @@ gcloud compute instances create nucleus-jumphost-878 \
           --image-project debian-cloud
           
           
-============================================================================================
+---------------------------------------------------------------------------------------------
 
 Task 2. Create a Kubernetes service cluster
 
@@ -47,7 +48,7 @@ kubectl expose deployment hello-server \
           --type=LoadBalancer \
           --port 8080
 
-============================================================================================
+---------------------------------------------------------------------------------------------
 
 
 Task 3. Set up an HTTP load balancer
@@ -115,4 +116,4 @@ gcloud compute forwarding-rules create http-content-rule \
         --ports 80
 gcloud compute forwarding-rules list
 
-============================================================================================
+---------------------------------------------------------------------------------------------
